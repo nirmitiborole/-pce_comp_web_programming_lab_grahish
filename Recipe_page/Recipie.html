@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rasoi Rescue</title>
+    <link rel="stylesheet" href="Recipie.css">
+</head>
+
+<body>
+
+    <header>
+        <nav>
+
+        </nav>
+    </header>
+    <div class="canvas" style="display: inline-block; width: 100px;">
+        <canvas id="myCanvas" width="200" height="500"></canvas>
+        <script>
+            const canvas = document.getElementById('myCanvas');
+            const ctx = canvas.getContext('2d');
+
+            // Create a linear gradient
+            const gradient = ctx.createLinearGradient(0, 0, 0, 500);
+            gradient.addColorStop(0, '#f0b27a'); // Light purple at top
+            gradient.addColorStop(1, '#d35400'); // Dark purple at bottom
+
+            // Fill the rectangle with the gradient
+            ctx.fillStyle = gradient;
+            ctx.fillRect(0, 0, 200, 500);
+
+            // Add text
+            var text="Infuse joy into every dish; your kitchen is the canvas, and each recipe a masterpiece ";
+            ctx.font = "italic 30px Arial";
+            ctx.fillStyle = "black";
+            ctx.fillText(text, 20, 39);
+            wrapText(ctx,text,20,39,160,30);
+
+            function wrapText(context, text, x, y, maxWidth, lineHeight) {
+            var words = text.split(' ');
+            var line = '';
+            for (var i = 0; i < words.length; i++) {
+                var testLine = line + words[i] + ' ';
+                var metrics = context.measureText(testLine);
+                var testWidth = metrics.width;
+                if (testWidth > maxWidth && i > 0) {
+                    context.fillText(line, x, y);
+                    line = words[i] + ' ';
+                    y += lineHeight;
+                } else {
+                    line = testLine;
+                }
+            }
+            context.fillText(line, x, y);
+        }
+        </script>
+    </div>
+
+    <main>
+
+
+<div class="main_header">
+    
+       
+          <span>
+             
+            Have Delicious <b>Taste</b> With Fitness  
+         </span>
+         
+      
+<p>
+        “Eating healthy doesn’t have to be boring. Rasoi Rescue presents recipes which will show you
+            how to make mouthwatering dishes that are also good for you. Whether you’re looking for a quick snack, a
+            hearty meal, or a decadent dessert, you’ll find something to satisfy your cravings and your body.
+</p>  
+</div>
+        
+
+        <div class="logo2">
+            <span1>Recipes</span1>
+            <div class="search-container">
+            
+             <img src="search.svg" alt="" class="search-icon">
+
+             <input class="searching" type="text" >
+           
+         </div>
+           
+
+
+        </div>
+
+
+
+        <span class="container">
+
+
+            <div class="box box1">
+
+                <div class="front">
+                    <img src="/images/paneer and rice.jpeg" alt="" height="300" width="290">
+                    <div class="box_footer">
+                        Panner With Rice
+                    </div>
+                </div>
+
+                <div class="back">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Food</th>
+                                <th>Serving Size</th>
+                                <th>Calories</th>
+                                <th>Protein (g)</th>
+                                <!-- <th>Fat (g)</th> -->
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Paneer</td>
+                                <td>100g</td>
+                                <td>206</td>
+                                <td>18</td>
+                                <!-- <td>14</td> -->
+
+                            </tr>
+                            <tr>
+                                <td>Rice (Basmati)</td>
+                                <td>1 cup cooked</td>
+                                <td>210</td>
+                                <td>5</td>
+                                <!-- <td>0.5</td> -->
+
+                            </tr>
+                            <tr>
+                                <td>Dal (Mixed)</td>
+                                <td>1 cup cooked</td>
+                                <td>212</td>
+                                <td>18</td>
+                                <!-- <td>1.3</td> -->
+
+                            </tr>
+                        </tbody>
+                    </table>
+                    <a
+                        href="https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqbHlydGhXb2laS09TN1R3eThwZUljTVd6ZVhOUXxBQ3Jtc0tuZGRGbXhrRDhTMmpYT1FjZnR5bnhtMXdMOVBBNDY5R2ZlU3JzeFBBcC1peWstYlN5d21FYjk4UlYxSGticzg1dnNjWjFaVVl3Q25KNWxhS050MGlFVHh5dlBxR2o4RnJrN2pfdDdfOUY1ZHpMaEtsQQ&q=https%3A%2F%2Fwww.chefkunalkapur.com%2Frecipe%2Fpaneer-biryani%2F&v=iosyoOKCdoM">
+                        click here for full recipe</a>
+                </div>
+
+
+            </div>
+
+
+
+
+            <div class="box box2">
+
+                <div class="front">
+                    <img src="/images/paneer and rice.jpeg" alt="" height="300" width="290">
+                    <div class="box_footer">
+                        Panner With Rice
+                    </div>
+                </div>
+
+                <div class="back">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Food</th>
+                                <th>Serving Size</th>
+                                <th>Calories</th>
+                                <th>Protein (g)</th>
+                                <!-- <th>Fat (g)</th> -->
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Paneer</td>
+                                <td>100g</td>
+                                <td>206</td>
+                                <td>18</td>
+                                <!-- <td>14</td> -->
+
+                            </tr>
+                            <tr>
+                                <td>Rice (Basmati)</td>
+                                <td>1 cup cooked</td>
+                                <td>210</td>
+                                <td>5</td>
+                                <!-- <td>0.5</td> -->
+
+                            </tr>
+                            <tr>
+                                <td>Dal (Mixed)</td>
+                                <td>1 cup cooked</td>
+                                <td>212</td>
+                                <td>18</td>
+                                <!-- <td>1.3</td> -->
+
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+
+
+            <div class="box box3">
+
+                <div class="front">
+                    <img src="/images/paneer and rice.jpeg" alt="" height="300" width="290">
+                    <div class="box_footer">
+                        Panner With Rice
+                    </div>
+                </div>
+
+                <div class="back">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Food</th>
+                                <th>Serving Size</th>
+                                <th>Calories</th>
+                                <th>Protein (g)</th>
+                                <!-- <th>Fat (g)</th> -->
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Paneer</td>
+                                <td>100g</td>
+                                <td>206</td>
+                                <td>18</td>
+                                <!-- <td>14</td> -->
+
+                            </tr>
+                            <tr>
+                                <td>Rice (Basmati)</td>
+                                <td>1 cup cooked</td>
+                                <td>210</td>
+                                <td>5</td>
+                                <!-- <td>0.5</td> -->
+
+                            </tr>
+                            <tr>
+                                <td>Dal (Mixed)</td>
+                                <td>1 cup cooked</td>
+                                <td>212</td>
+                                <td>18</td>
+                                <!-- <td>1.3</td> -->
+
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="box box4">
+
+                <div class="front">
+                    <img src="/images/paneer and rice.jpeg" alt="" height="300" width="290">
+                    <div class="box_footer">
+                        Panner With Rice
+                    </div>
+                </div>
+
+                <div class="back">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Food</th>
+                                <th>Serving Size</th>
+                                <th>Calories</th>
+                                <th>Protein (g)</th>
+                                <!-- <th>Fat (g)</th> -->
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Paneer</td>
+                                <td>100g</td>
+                                <td>206</td>
+                                <td>18</td>
+                                <!-- <td>14</td> -->
+
+                            </tr>
+                            <tr>
+                                <td>Rice (Basmati)</td>
+                                <td>1 cup cooked</td>
+                                <td>210</td>
+                                <td>5</td>
+                                <!-- <td>0.5</td> -->
+
+                            </tr>
+                            <tr>
+                                <td>Dal (Mixed)</td>
+                                <td>1 cup cooked</td>
+                                <td>212</td>
+                                <td>18</td>
+                                <!-- <td>1.3</td> -->
+
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+
+
+            <div class="box box5">
+
+                <div class="front">
+                    <img src="/images/paneer and rice.jpeg" alt="" height="300" width="290">
+                    <div class="box_footer">
+                        Panner With Rice
+                    </div>
+                </div>
+
+                <div class="back">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Food</th>
+                                <th>Serving Size</th>
+                                <th>Calories</th>
+                                <th>Protein (g)</th>
+                                <!-- <th>Fat (g)</th> -->
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Paneer</td>
+                                <td>100g</td>
+                                <td>206</td>
+                                <td>18</td>
+                                <!-- <td>14</td> -->
+
+                            </tr>
+                            <tr>
+                                <td>Rice (Basmati)</td>
+                                <td>1 cup cooked</td>
+                                <td>210</td>
+                                <td>5</td>
+                                <!-- <td>0.5</td> -->
+
+                            </tr>
+                            <tr>
+                                <td>Dal (Mixed)</td>
+                                <td>1 cup cooked</td>
+                                <td>212</td>
+                                <td>18</td>
+                                <!-- <td>1.3</td> -->
+
+                            </tr>
+                        </tbody>
+                    </table>
+                    <a
+                        href="https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqbHlydGhXb2laS09TN1R3eThwZUljTVd6ZVhOUXxBQ3Jtc0tuZGRGbXhrRDhTMmpYT1FjZnR5bnhtMXdMOVBBNDY5R2ZlU3JzeFBBcC1peWstYlN5d21FYjk4UlYxSGticzg1dnNjWjFaVVl3Q25KNWxhS050MGlFVHh5dlBxR2o4RnJrN2pfdDdfOUY1ZHpMaEtsQQ&q=https%3A%2F%2Fwww.chefkunalkapur.com%2Frecipe%2Fpaneer-biryani%2F&v=iosyoOKCdoM"></a>
+                </div>
+            </div>
+
+
+
+            <div class="box box6">
+
+                <div class="front">
+                    <img src="/images/paneer and rice.jpeg" alt="" height="300" width="290">
+                    <div class="box_footer">
+                        Panner With Rice
+                    </div>
+                </div>
+
+                <div class="back">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Food</th>
+                                <th>Serving Size</th>
+                                <th>Calories</th>
+                                <th>Protein (g)</th>
+                                <!-- <th>Fat (g)</th> -->
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Paneer</td>
+                                <td>100g</td>
+                                <td>206</td>
+                                <td>18</td>
+                                <!-- <td>14</td> -->
+
+                            </tr>
+                            <tr>
+                                <td>Rice (Basmati)</td>
+                                <td>1 cup cooked</td>
+                                <td>210</td>
+                                <td>5</td>
+                                <!-- <td>0.5</td> -->
+
+                            </tr>
+                            <tr>
+                                <td>Dal (Mixed)</td>
+                                <td>1 cup cooked</td>
+                                <td>212</td>
+                                <td>18</td>
+                                <!-- <td>1.3</td> -->
+
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+
+            <div class="box box7">
+
+
+                <div class="front">
+                    <img src="/images/paneer and rice.jpeg" alt="" height="300" width="290">
+                    <div class="box_footer">
+                        Panner With Rice
+                    </div>
+                </div>
+
+                <div class="back">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Food</th>
+                                <th>Serving Size</th>
+                                <th>Calories</th>
+                                <th>Protein (g)</th>
+                                <!-- <th>Fat (g)</th> -->
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Paneer</td>
+                                <td>100g</td>
+                                <td>206</td>
+                                <td>18</td>
+                                <!-- <td>14</td> -->
+
+                            </tr>
+                            <tr>
+                                <td>Rice (Basmati)</td>
+                                <td>1 cup cooked</td>
+                                <td>210</td>
+                                <td>5</td>
+                                <!-- <td>0.5</td> -->
+
+                            </tr>
+                            <tr>
+                                <td>Dal (Mixed)</td>
+                                <td>1 cup cooked</td>
+                                <td>212</td>
+                                <td>18</td>
+                                <!-- <td>1.3</td> -->
+
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+
+            <div class="box box8">
+
+                <div class="front">
+                    <img src="/images/paneer and rice.jpeg" alt="" height="300" width="290">
+                    <div class="box_footer">
+                        Panner With Rice
+                    </div>
+                </div>
+
+                <div class="back">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Food</th>
+                                <th>Serving Size</th>
+                                <th>Calories</th>
+                                <th>Protein (g)</th>
+                                <!-- <th>Fat (g)</th> -->
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Paneer</td>
+                                <td>100g</td>
+                                <td>206</td>
+                                <td>18</td>
+                                <!-- <td>14</td> -->
+
+                            </tr>
+                            <tr>
+                                <td>Rice (Basmati)</td>
+                                <td>1 cup cooked</td>
+                                <td>210</td>
+                                <td>5</td>
+                                <!-- <td>0.5</td> -->
+
+                            </tr>
+                            <tr>
+                                <td>Dal (Mixed)</td>
+                                <td>1 cup cooked</td>
+                                <td>212</td>
+                                <td>18</td>
+                                <!-- <td>1.3</td> -->
+
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+
+            <div class="box box9">
+
+                <div class="front">
+                    <img src="/images/paneer and rice.jpeg" alt="" height="300" width="290">
+                    <div class="box_footer">
+                        Panner With Rice
+                    </div>
+                </div>
+
+                <div class="back">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Food</th>
+                                <th>Serving Size</th>
+                                <th>Calories</th>
+                                <th>Protein (g)</th>
+                                <!-- <th>Fat (g)</th> -->
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Paneer</td>
+                                <td>100g</td>
+                                <td>206</td>
+                                <td>18</td>
+                                <!-- <td>14</td> -->
+
+                            </tr>
+                            <tr>
+                                <td>Rice (Basmati)</td>
+                                <td>1 cup cooked</td>
+                                <td>210</td>
+                                <td>5</td>
+                                <!-- <td>0.5</td> -->
+
+                            </tr>
+                            <tr>
+                                <td>Dal (Mixed)</td>
+                                <td>1 cup cooked</td>
+                                <td>212</td>
+                                <td>18</td>
+                                <!-- <td>1.3</td> -->
+
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+
+            <!-- <div class="box box10">
+
+                    <div class="front">
+                        <img src="/images/paneer and rice.jpeg" alt="" height="300" width="290">
+                        <div class="box_footer">
+                            Panner With Rice
+                        </div>
+                    </div>
+    
+                    <div class="back"></div>
+                </div> -->
+
+
+        </span>
+
+    </main>
+</body>
+
+</html>
