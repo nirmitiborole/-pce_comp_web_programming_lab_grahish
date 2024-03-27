@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Section Styles */
+        .section-title {
+            color: purple;
+            font-size: 50px;
+            text-align: center;
+            margin-bottom: 30px;
+            text-decoration: underline;
+        }
+
+        .contact-title {
+            color: purple;
+            font-size: 25px;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin: 0 -15px; /* Added negative margin to offset padding */
+        }
+
+        .contact-info-item {
+            flex: 0 0 calc(25% - 30px); /* Adjusted width to include space between items */
+            text-align: center;
+            margin-bottom: 10px;
+            padding: 10px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .contact-info-item .icon {
+            margin-bottom: 15px;
+        }
+
+        .contact-info-item .fa {
+            font-size: 30px;
+            color: purple;
+        }
+
+        .contact-info-item h4 {
+            font-size: 20px;
+            color: purple;
+            margin-bottom: 10px;
+        }
+
+        .contact-info-item p {
+            font-size: 16px;
+            color: #555555;
+            margin: 0;
+        }
+
+        /* Media Queries */
+        @media (max-width: 768px) {
+            .contact-info-item {
+                flex: 0 0 calc(50% - 30px);
+            }
+        }
+
+        /* Video Styles */
+        video {
+            width: 100%; /* Make the video responsive */
+            border-radius: 10px; /* Optional: Add border radius */
+        }
+    </style>
+</head>
+<body>
+    <section class="contact section" id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contact Us</h2>
+            </div>
+            <div class="inside">
+                <h3 class="contact-title">Feel Free To Reach Us</h3>
+                <div class="row">
+                    <!-- Contact Items -->
+                    <div class="contact-info-item">
+                        <div class="icon">
+                            <i class="fa fa-phone"></i>
+                        </div>
+                        <h4>Call us</h4>
+                        <p>+91 98765XXXXX</p>
+                    </div>
+                    <div class="contact-info-item">
+                        <div class="icon">
+                            <i class="fa fa-map-marker-alt"></i>
+                        </div>
+                        <h4>Location</h4>
+                        <p>Pillai College Of Engineering</p>
+                        <button onclick="getLocation()">Try It</button>
+                        <p id="demo"></p>
+                        <script>
+                            const x = document.getElementById("demo");
+                            
+                            function getLocation() {
+                              if (navigator.geolocation) {
+                                navigator.geolocation.getCurrentPosition(showPosition);
+                              } else { 
+                                x.innerHTML = "Geolocation is not supported by this browser.";
+                              }
+                            }
+                            
+                            function showPosition(position) {
+                              x.innerHTML = "Latitude: " + position.coords.latitude + 
+                              "<br>Longitude: " + position.coords.longitude;
+                            }
+                            </script>
+                    </div>
+                    <div class="contact-info-item">
+                        <div class="icon">
+                            <i class="fa fa-envelope"></i>
+                        </div>
+                        <h4>Email</h4>
+                        <p>Support@Rasoirescue.com</p>
+                    </div>
+                    <div class="contact-info-item">
+                        <div class="icon">
+                            
+                        </div>
+                        <video controls src="Keyboard_Contact_us.mp4"></video>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
